@@ -1,13 +1,14 @@
 {
   "name": "@mohism/bench",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.5",
+  "description": "bench",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "mohism/utils/bench"
+    "mohism",
+    "bench"
   ],
   "author": "lanhao",
   "license": "ISC",
@@ -20,5 +21,13 @@
   "dependencies": {
     "@types/benchmark": "^1.0.31",
     "benchmark": "^2.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohism-framework/bench.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohism-framework/bench/issues"
+  },
+  "homepage": "https://github.com/mohism-framework/bench#readme"
 }

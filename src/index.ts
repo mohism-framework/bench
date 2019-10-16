@@ -1,7 +1,7 @@
 import { Suite } from 'benchmark';
 import Benchmark from 'benchmark';
 
-export default class MohismBench {
+export class MohismBench {
   private suite: Suite;
   private fastestName: string;
   private fastestScore: number;
@@ -20,11 +20,11 @@ export default class MohismBench {
     this.suite
       .on('cycle', (event: Event) => {
         const mark: Benchmark = event.target as unknown as Benchmark;
-        if(this.fastestScore<mark.hz){
+        if (this.fastestScore < mark.hz) {
           this.fastestScore = mark.hz;
           this.fastestName = String(mark).split('x')[0];
         }
-        
+
         console.log(String(mark));
       })
       .on('complete', () => {
@@ -33,3 +33,5 @@ export default class MohismBench {
       .run({ 'async': true });
   }
 }
+
+export default MohismBench;
