@@ -1,7 +1,8 @@
 import { Suite } from 'benchmark';
 import Benchmark from 'benchmark';
 
-export class MohismBench {
+
+export = class MohismBench {
   private suite: Suite;
   private fastestName: string;
   private fastestScore: number;
@@ -34,4 +35,4 @@ export class MohismBench {
   }
 }
 
-export default MohismBench;
+
