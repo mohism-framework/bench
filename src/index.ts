@@ -49,7 +49,7 @@ export = class MohismBench {
         Object.keys(this.scores).forEach(name => {
           const r = Math.floor(20 * (this.scores[name] / this.fastestScore)) || 1;
 
-          console.log(`${rightpad(name, this.nameLength + 4)} ${rightpad(`${Math.floor(this.scores[name])}`, 12)} ${'🐌 '.repeat(r)}`);
+          console.log(`${rightpad(name, this.nameLength + 4)} ${rightpad(`${Math.floor(this.scores[name])} ops/sec`, 12)} ${'🐌 '.repeat(r)}`);
         });
       })
       .run({ 'async': true });
