@@ -1,10 +1,14 @@
 {
   "name": "@mohism/bench",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "bench",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx eslint src/**/*.ts --fix && npx tsc",
+    "dev": "npx ts-node ./src/bin/index.ts",
+    "lint": "npx eslint src/**/*.ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"run 'sudo npm link' and 'mohism -h'\""
   },
   "keywords": [
     "mohism",
@@ -14,7 +18,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
     "eslint": "^6.5.1",
+    "nodemon": "^1.19.4",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
   },
